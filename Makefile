@@ -20,6 +20,9 @@ arch ?= x86_64
 ifeq ($(os_distro), al2023)
 	AMI_VARIANT := $(AMI_VARIANT)-al2023
 endif
+ifeq ($(os_distro), rockylinux9)
+	AMI_VARIANT := $(AMI_VARIANT)-rockylinux9
+endif
 ifeq ($(arch), arm64)
 	instance_type ?= m6g.large
 	AMI_VARIANT := $(AMI_VARIANT)-arm64
